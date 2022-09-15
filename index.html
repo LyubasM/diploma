@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My diploma</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
         <div class="banner">
-          <nav class="navigation">
+          <div class="navigation-wrp">
             <a href="#"><img src='images/noemi-logo.svg' class="logo" alt="Логотип"></a>
-            <ul class="menu">
-              <li class="menu__menu-item"><a href="#" class="menu_item_link">Главная</a></li>
-              <li class="menu__menu-item"><a href="#" class="menu_item_link">Посты</a></li>
-              <li class="menu__menu-item"><a href="#" class="menu_item_link">Статьи</a></li>
-              <li class="menu__menu-item"><a href="#" class="menu_item_link">Теги</a></li>
-              <li class="menu__menu-item"><a href="#" class="menu_item_link">Темы</a></li>
-              <li class="menu__menu-item"><a href="#" class="menu_item_link">Контакты</a></li>
-            </ul>
-          </nav>
+            <nav class="navigation">
+              <input id="burger-menu" type="checkbox" />
+              <label for="burger-menu" class="burger-menu__btn"><span class="burger-menu__icon"></span></span></label>
+              <ul class="menu">
+                <li class="menu__menu-item"><a href="#" class="menu_item_link">Главная</a></li>
+                <li class="menu__menu-item"><a href="#" class="menu_item_link">Посты</a></li>
+                <li class="menu__menu-item"><a href="#" class="menu_item_link">Статьи</a></li>
+                <li class="menu__menu-item"><a href="#" class="menu_item_link">Теги</a></li>
+                <li class="menu__menu-item"><a href="#" class="menu_item_link">Темы</a></li>
+                <li class="menu__menu-item"><a href="#" class="menu_item_link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
           <h1 class="title">
           Блог о творчестве, спорте, и образе жизни
           </h1>
@@ -428,5 +432,36 @@
          <div class="copyright"> <a href="#" class="copyright-link">Copyright © 2009–2019 City Blog LLC.</a>    </div>
         </div>
       </footer>
-</body>
+      <div class="pop-up_wrp">
+        <div class="pop-up">
+          <h2 class="pop-up_title">Ваш фидбек</h2>
+          <form class="pop-up_form" name="feedback-form">
+            <div class="form_row">
+              <span class="pop-up_text">Как часто Вы заходите на сайт?</span>
+              <select class="form_select" name="frequency">
+                <option class="form_select-option" value="">Почти каждый день</option>
+                <option class="form_select-option" value="">Раз в несколько дней</option>
+                <option class="form_select-option" value="">Раз в несколько недель</option>
+                <option class="form_select-option" value="">Несколько раз в год</option>
+              </select>
+           </div>
+           <div class="form_row">
+            <span class="pop-up_text">Вы подписаны на e-mail рассылку?</span>
+            <input type="radio" class="form_radio" id="yes" name="mailing" value="yes">
+            <label for="yes" class="form_radio-label">Да</label>
+            <input type="radio" class="form_radio" id="no" name="mailing" value="no">
+            <label for="no" class="form_radio-label">Нет</label>
+           </div>
+           <div class="form_row">
+            <span class="pop-up_text">Расскажите, какой контент Вы хотели бы видеть на нашем сайте?</span>
+            <textarea class="form_textarea" placeholder="Может, больше рецептов?"></textarea>
+           </div> 
+           <div class="form_row">
+            <button class="form_button" type="submit">Отправить</button> 
+           </div>
+          </form>
+          
+        </div>
+      </div>
+  </body>
 </html>
