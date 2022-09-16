@@ -138,6 +138,7 @@
     max-width: 1200px;
     margin: auto;
     padding: 0 15px;
+    box-sizing: border-box;
   }
   
   .page-content-justify {
@@ -662,15 +663,15 @@
   .shop__item-wrp {
     border: 3px solid rgba(133, 120, 79, .4);
     padding: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     flex-grow: 1;
   }
   
   .shop__item {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
   }
 
   .shop__item-picture {
@@ -710,6 +711,7 @@
   }
 
   .shop__action {
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -723,7 +725,7 @@
   .shop__old-price {
     display: block;
     text-decoration: line-through;
-    font-size: 14pt;
+    font-size: 14px;
   }
 
   .shop__actual-price {
@@ -748,6 +750,7 @@
     }
     .shop__item {
       width: 48%;
+      margin-bottom: 30px;
     }
   }
 
@@ -1031,8 +1034,8 @@
     .burger-menu__btn {
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: 36px;
     right: 40px;
     width: 26px;
     height: 26px;
@@ -1107,7 +1110,9 @@
       color: #000;
     }
 
-
+    .navigation-wrp {
+      display: block;
+    }
 
 }
 
@@ -1152,7 +1157,8 @@
 
   .logo {
     padding-left: 0;
-    width: 270px;
+    width: 95%;
+    max-width: 270px;
     margin: 220px auto 0;
   }
 }
